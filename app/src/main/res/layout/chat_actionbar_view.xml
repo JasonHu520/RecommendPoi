@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" >
+
+
+    <ImageButton
+        android:id="@+id/return_chat"
+        android:layout_width="33dp"
+        android:layout_height="37dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:src="@drawable/chat_return" />
+
+    <TextView
+        android:id="@+id/friend_name_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="#FFFFFFFF"
+        android:textSize="18sp"
+        android:text="标题" />
+    <!-- actionbar 右边按钮 -->
+
+    <TextView
+        android:id="@+id/more_setting_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:textColor="#FFFFFFFF"
+        android:textSize="16sp"
+        android:text="更多"
+        android:contentDescription="TODO" />
+
+</RelativeLayout>

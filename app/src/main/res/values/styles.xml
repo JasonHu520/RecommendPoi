@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="MyAppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Theme.AppStartLoadTranslucent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+
+    </style>
+    <style name="AppTheme" parent="MyAppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="BottomDialogAnimation">
+
+    <item name="android:windowEnterAnimation">@anim/bottom_dialog_slide_up</item>
+
+    <item name="android:windowExitAnimation">@anim/bottom_dialog_slide_down</item>
+
+    </style>
+
+
+    <style name="BottomPopupAnimation">
+
+    <item name="android:windowEnterAnimation">@anim/popup_bottom_slide_up</item>
+
+    <item name="android:windowExitAnimation">@anim/popup_bottom_slide_down</item>
+
+    </style>
+
+    <style name="popmenu_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popumenu_animation_show</item>
+        <item name="android:windowExitAnimation">@anim/popumenu_animation_hide</item>
+    </style>
+
+
+</resources>

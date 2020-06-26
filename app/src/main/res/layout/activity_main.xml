@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    <RelativeLayout
+        android:layout_below="@+id/exit_note"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/bottom_layout"
+            layout="@layout/bottom_panel_layout" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_above="@id/bottom_layout"
+            android:background="#FFE7E7E7" />
+
+        <include
+            android:id="@+id/head_layout"
+            layout="@layout/head_panel_layout" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_below="@id/head_layout"
+            android:background="#FFE7E7E7" />
+        <FrameLayout
+            android:id="@+id/fragment_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head_layout"
+            android:layout_above="@id/bottom_layout" >
+        </FrameLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/exit_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_18"
+        android:text="再点一次就退出应用"
+        android:background="@color/red"
+        android:visibility="gone"
+        android:textColor="@color/GhostWhite"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/item_text_for_list_picSetting"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:background="@color/whitesmoke"
+        android:textColor="@color/__picker_black_40"
+        android:text="测试"
+        android:gravity="center"/>
+    <View
+        android:layout_width="150dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        />
+
+</LinearLayout>

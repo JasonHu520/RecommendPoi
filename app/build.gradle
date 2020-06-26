@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'com.mob.sdk'
+
+
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+     appKey "292c9628ad29f"
+     appSecret "384235e0a6a0b3bac2e35aa74f02e142"
+     SMSSDK {}
+
+}
+android {
+
+    compileSdkVersion 28
+    sourceSets.main.jniLibs.srcDirs = ['libs']
+    defaultConfig {
+        applicationId "com.example.jasonhu.recommendpoi"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+    buildscript {
+       // 添加MobSDK的maven地址
+        repositories {
+                  maven {
+                             url "http://mvn.mob.com/android"
+                         }
+            }
+                dependencies {
+           // 注册MobSDK
+             classpath 'com.mob.sdk:MobSDK:+'
+             }
+        repositories {
+            maven {
+                url 'https://oss.sonatype.org/content/repositories/snapshots'
+            }
+            mavenCentral()
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/AMap3DMap_6.5.0_AMapSearch_6.5.0_AMapLocation_4.4.0_20181122.jar')
+    implementation project(path: ':library')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.github.sendtion:XRichText:1.1'
+
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    //recyclerview列表 https://github.com/jianghejie/XRecyclerView
+    implementation 'com.jcodecraeer:xrecyclerview:1.3.2'
+
+    implementation 'me.iwf.photopicker:PhotoPicker:0.8.4@aar'
+    //图片加载框架 https://github.com/bumptech/glide
+    //compile 'com.github.bumptech.glide:glide:3.7.0'
+    //旧版本动画兼容库
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+    implementation 'io.reactivex:rxjava:1.1.0'
+    implementation 'io.reactivex:rxandroid:1.1.0'
+
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.3'
+
+    implementation 'com.squareup.okhttp3:okhttp:4.7.2'
+    implementation 'cn.pedant.sweetalert:library:1.3'
+
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //放大图片
+    implementation 'com.github.chrisbanes:PhotoView:2.1.4'
+
+    //圆形图库
+    implementation "de.hdodenhof:circleimageview:2.2.0"
+
+    implementation "org.igniterealtime.smack:smack-android-extensions:4.3.0"
+    implementation "org.igniterealtime.smack:smack-tcp:4.3.0"
+
+    implementation group: 'io.netty', name: 'netty-all', version: '4.1.44.Final'
+    implementation 'com.google.protobuf:protobuf-java:3.11.1'
+
+
+
+
+
+}

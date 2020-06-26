@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package tutorial;
+
+option java_package = "com.example.jasonhu.recommendpoi";
+option java_outer_classname = "Information";
+
+message Student{
+    required string name = 1;
+    required int32 id = 2;
+    optional string email = 3;
+    optional string phoneNumber = 4;
+}
